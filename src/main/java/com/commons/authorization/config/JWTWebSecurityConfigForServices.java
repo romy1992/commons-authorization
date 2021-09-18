@@ -41,7 +41,7 @@ public class JWTWebSecurityConfigForServices extends WebSecurityConfigurerAdapte
     "/api/city/getLocalByNameAndAddress",
     "/api/city/getAllCoordinates"
   };
-  protected static final String[] USER_MATCHER = {"/getLogin/**"};
+  protected static final String[] USER_MATCHER = {"/api/getLogin/**"};
   protected static final String[] ADMIN_MATCHER = {
     BASE_URL + "save/entity/",
     BASE_URL + "get/entity/**",

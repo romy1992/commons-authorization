@@ -39,7 +39,7 @@ public class CustomLocalDetailsService implements UserDetailsService {
     restTemplate
         .getInterceptors()
         .add(new BasicAuthenticationInterceptor(config.getUserId(), config.getPassword()));
-    baseUrl = config.getProtocol() + config.getPort();
+    baseUrl = config.getProtocol() + config.getServer();
 
     if (config.getPort() != null) baseUrl += ":" + config.getPort();
   }
@@ -47,7 +47,7 @@ public class CustomLocalDetailsService implements UserDetailsService {
   @Override
   public UserDetails loadUserByUsername(String userId) throws UsernameNotFoundException {
 
-    String errMsg = "";
+    String errMsg;
     if (userId == null || userId.length() < 2) {
       errMsg = ErrorMessage.NAME_USER_NOT_VALID;
       logger.warn(errMsg);

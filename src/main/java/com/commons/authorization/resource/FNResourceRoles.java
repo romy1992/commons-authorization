@@ -10,11 +10,11 @@ import java.util.List;
 @RestController
 @CrossOrigin(
     origins = {
-      "http://localhost:4200",
       "http://localhost:8100",
       "http://localhost:8200",
       "http://localhost:8101",
-      "http://localhost:8201"
+      "http://localhost:8201",
+      "http://localhost"
     })
 @RequestMapping("api")
 public abstract class FNResourceRoles<M, P, R extends JpaRepository<?, ?>> {

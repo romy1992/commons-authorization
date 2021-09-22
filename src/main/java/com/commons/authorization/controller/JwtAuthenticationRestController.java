@@ -26,11 +26,11 @@ import java.util.UUID;
 @RestController
 @CrossOrigin(
     origins = {
-      "http://localhost:4200",
       "http://localhost:8100",
       "http://localhost:8200",
       "http://localhost:8101",
-      "http://localhost:8201"
+      "http://localhost:8201",
+      "http://localhost"
     })
 public class JwtAuthenticationRestController {
 

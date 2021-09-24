@@ -39,7 +39,12 @@ public class JWTWebSecurityConfigForServices extends WebSecurityConfigurerAdapte
     "/api/city/controller/isVerified",
     "/api/city/getAllLocalVerifiedFromCity",
     "/api/city/getLocalByNameAndAddress",
-    "/api/city/getAllCoordinates"
+    "/api/city/getAllCoordinates",
+    "/api/proposal/insert",
+    "/api/proposal/refreshStateProposal",
+    "/api/proposal/isExisting",
+    "/api/proposal/getLocal",
+    "/api/proposal/delete"
   };
   protected static final String[] USER_MATCHER = {"/api/getLogin/**"};
   protected static final String[] ADMIN_MATCHER = {
@@ -47,7 +52,7 @@ public class JWTWebSecurityConfigForServices extends WebSecurityConfigurerAdapte
     BASE_URL + "get/entity/**",
     BASE_URL + "update/entity",
     BASE_URL + "delete/entity/**",
-    BASE_URL + "getAll/entities/"
+    BASE_URL + "getAll/entities/",
   };
   protected static final String[] SUPER_ADMIN_MATCHER = {"/api/interceptor/to/update/**"};
 
